@@ -1,4 +1,4 @@
- [
+[ 
     {
         "id": 1,
         "nombre": "Coca Cola x1500cc",
@@ -222,5 +222,5 @@
   "desc": "Sussex",
   "img": "./img/sussex.jpg",
   "cantidad": 1
-},
+}
 ]
