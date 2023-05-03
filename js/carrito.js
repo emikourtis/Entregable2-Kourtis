@@ -7,7 +7,7 @@ function procesarPedido() {
       div.innerHTML += `
             <div class="modal-contenedor">
               <div>
-              <img class="img-fluid img-carrito" src="${img}"/>
+              <img class="img-top img-carrito" src="${img}"/>
               </div>
               <div>
               <p>Producto: ${nombre}</p>

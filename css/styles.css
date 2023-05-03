@@ -1,60 +1,67 @@
+.p-3 {
+    padding: 1rem !important;
+    font-size: 70px;
+    margin-left: 120px;
+}
+
 .imagen {
     max-width: 100%;
-}
+};
 
 a {
     cursor: pointer;
-}
+};
 
 .alerta {
     font-weight: 700;
-}
+};
 
 #title{
     margin-left: 200px;
     font-size: 50px;
-}
+};
 
 body {
     background-color: #E3D8D6;
     overflow-x: hidden;
-}
+};
 
 #main{
     align-items: center;
-}
+};
+
 .modal-contenedor {
     display: flex;
     align-items: center;
     gap: 2rem;
-}
+};
 
-.img-carrito {
-    width: 200px;
-    padding: 20px;
+img.img-thumbnail.img-carrito{
+    width: 30%;
+    
 }
 
 .modal-content {
     background-color: #E3D8D6;
-}
+};
 
 .parrafo {
     font-weight: 900;
     font-style: italic;
-}
+};
 
 #precioTotal {
     margin: 0;
     padding: 0;
-}
+};
 
 a {
     text-decoration: none;
-}
+};
 
 .boton {
     opacity: 0;
-}
+};
 
 .spinner {
     margin: 100px auto;
@@ -65,7 +72,7 @@ a {
 
     -webkit-animation: sk-rotate 2.0s infinite linear;
     animation: sk-rotate 2.0s infinite linear;
-}
+};
 
 .dot1,
 .dot2 {
@@ -79,27 +86,27 @@ a {
 
     -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
     animation: sk-bounce 2.0s infinite ease-in-out;
-}
+};
 
 .dot2 {
     top: auto;
     bottom: 0;
     -webkit-animation-delay: -1.0s;
     animation-delay: -1.0s;
-}
+};
 
 @-webkit-keyframes sk-rotate {
     100% {
         -webkit-transform: rotate(360deg)
     }
-}
+};
 
 @keyframes sk-rotate {
     100% {
         transform: rotate(360deg);
         -webkit-transform: rotate(360deg)
     }
-}
+};
 
 @-webkit-keyframes sk-bounce {
 
@@ -111,7 +118,7 @@ a {
     50% {
         -webkit-transform: scale(1.0)
     }
-}
+};
 
 @keyframes sk-bounce {
 
@@ -129,6 +136,14 @@ a {
 
 
 .img-fluid {
-    max-width: 45%;
     height: auto;
-  };
+}
+
+#carritoContenedor{
+    font-size: 40px;
+    
+}
+
+#carritoContenedor:hover{
+    cursor: pointer;
+}

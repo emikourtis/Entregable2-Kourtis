@@ -240,7 +240,7 @@ const formulario = document.querySelector('#procesar-pago')
 
 if (activarFuncion) {
   activarFuncion.addEventListener("click", procesarPedido);
-}
+};
 
 document.addEventListener("DOMContentLoaded", () => {
   carrito = JSON.parse(localStorage.getItem("carrito")) || [];
@@ -250,7 +250,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 if (formulario) {
   formulario.addEventListener('submit', enviarCompra)
-}
+};
 
 
 if (vaciarCarrito) {
@@ -258,7 +258,7 @@ if (vaciarCarrito) {
     carrito.length = [];
     mostrarCarrito();
   });
-}
+};
 
 if (procesarCompra) {
   procesarCompra.addEventListener("click", () => {
@@ -273,7 +273,7 @@ if (procesarCompra) {
       location.href = "compra.html";
     }
   });
-}
+};
 /*
 //prueba fetch(me salen las cards pero dicen [object object])
 
@@ -329,16 +329,16 @@ const pedirProductos = async () => {
 pedirProductos()
 */
 
-
+//INSERTO LAS CARDS DE LOS PRODUCTOS
 stockProductos.forEach((prod) => {
   const { id, nombre, precio, desc, img, cantidad } = prod;
   if (contenedor) {
     contenedor.innerHTML += `
-    <div class="card mt-3 m-3 ms-4" style="width: 18rem;">
+    <div class="card mt-3 m-3 ms-4 rounded" style="width: 18rem;">
     <img class="card-img-top mt-2" src="${img}" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">${nombre}</h5>
-      <p class="card-text">Precio: ${precio}</p>
+      <p class="card-text "><h5 class="text-danger bg-light font-weight-bold">Precio: ${precio}</h5></p>
       <p class="card-text">Descripcion: ${desc}</p>
       <p class="card-text">Cantidad: ${cantidad}</p>
       <button class="btn btn-success" onclick="agregarProducto(${id})">Agregar al carrito</button>
@@ -375,21 +375,21 @@ const mostrarCarrito = () => {
       console.log(modalBody);
       modalBody.innerHTML += `
       <div class="modal-contenedor">
-        <div>
-        <img class="img-fluid img-carrito" src="${img}"/>
+        <div id="imagen-carrito">
+        <img class="img-thumbnail img-carrito" src="${img}" style="width: 30%"/>
         </div>
         <div>
         <p>Producto: ${nombre}</p>
       <p>Precio: ${precio}</p>
       <p>Cantidad :${cantidad}</p>
-      <button class="btn btn-danger"  onclick="eliminarProducto(${id})">Eliminar producto</button>
+      <button class="btn btn-danger" style="margin-bottom:9px" onclick="eliminarProducto(${id})">Eliminar producto</button>
         </div>
       </div>
       
   
       `;
     });
-  }
+  };
 
   if (carrito.length === 0) {
     console.log("Nada");
@@ -413,13 +413,13 @@ const mostrarCarrito = () => {
 
 function guardarStorage() {
   localStorage.setItem("carrito", JSON.stringify(carrito));
-}
+};
 
 function eliminarProducto(id) {
   const juegoId = id;
   carrito = carrito.filter((juego) => juego.id !== juegoId);
   mostrarCarrito();
-}
+};
 function procesarPedido() {
   carrito.forEach((prod) => {
     const listaCompra = document.querySelector("#lista-compra tbody");
@@ -442,13 +442,13 @@ function procesarPedido() {
     (acc, prod) => acc + prod.cantidad * prod.precio,
     0
   );
-}
+};
 
 function enviarCompra(e) {
   e.preventDefault()
   const cliente = document.querySelector('#cliente').value
   const email = document.querySelector('#correo').value
-
+//validacion formulario
   if (email === '' || cliente == '') {
     Swal.fire({
       title: "¡Debes completar tu email y nombre!",
@@ -501,5 +501,5 @@ function enviarCompra(e) {
   }
   localStorage.clear()
 
-}
+};
 
