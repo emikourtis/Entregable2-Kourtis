@@ -392,7 +392,6 @@ const mostrarCarrito = () => {
   };
 
   if (carrito.length === 0) {
-    console.log("Nada");
     modalBody.innerHTML = `
     <p class="text-center text-primary parrafo">¡Aun no agregaste nada!</p>
     `;
