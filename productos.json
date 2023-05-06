@@ -6,7 +6,7 @@
         "desc": "Bebidas",
         "img": "./img/coca-cola-1500-cc.jpg",
         "cantidad": 1
-        },
+    },
     {
         "id": 2,
         "nombre": "Coca Cola Cero x1500cc",
@@ -14,7 +14,7 @@
         "desc": "Bebidas",
         "img": "./img/coca-cola-zero.jpg",
         "cantidad": 1
-        },
+    },
     {
         "id": 3,
         "nombre": "Pepsi x1500cc",
@@ -166,61 +166,61 @@
       "desc": "Bimbo",
       "img": "./img/lactal.jpg",
       "cantidad": 1
-  },
-  {
+    },
+    {
     "id": 22,
     "nombre": "Pan Lactal blanco x500gr",
     "precio": 590,
     "desc": "Bimbo",
     "img": "./img/lactal2.jpg",
     "cantidad": 1
-},
-{
-  "id": 23,
-  "nombre": "Mermelada campañola v/sabores",
-  "precio": 590,
-  "desc": "Campañola",
-  "img": "./img/mermelada2.jpg",
-  "cantidad": 1
-},
-{
-  "id": 24,
-  "nombre": "Mermelada BC v/sabores",
-  "precio": 690,
-  "desc": "Campañola",
-  "img": "./img/mermelada.jpg",
-  "cantidad": 1
-},
-{
-  "id": 25,
-  "nombre": "Lavandina x1lt",
-  "precio": 190,
-  "desc": "Ayudin",
-  "img": "./img/ayudin.jpg",
-  "cantidad": 1
-},
-{
-  "id": 26,
-  "nombre": "Papel Hig. x80mts",
-  "precio": 790,
-  "desc": "Higienol",
-  "img": "./img/higienol.jpg",
-  "cantidad": 1
-},
-{
-  "id": 27,
-  "nombre": "Papel Hig. d/h",
-  "precio": 690,
-  "desc": "Higienol",
-  "img": "./img/hig80.jpg",
-  "cantidad": 1
-},
-{
-  "id": 28,
-  "nombre": "Papel cocina Sussex Clasico",
-  "precio": 390,
-  "desc": "Sussex",
-  "img": "./img/sussex.jpg",
-  "cantidad": 1
-}
+    },
+    {
+    "id": 23,
+    "nombre": "Mermelada campañola v/sabores",
+    "precio": 590,
+    "desc": "Campañola",
+    "img": "./img/mermelada2.jpg",
+    "cantidad": 1
+    },
+    {
+    "id": 24,
+    "nombre": "Mermelada BC v/sabores",
+    "precio": 690,
+    "desc": "Campañola",
+    "img": "./img/mermelada.jpg",
+    "cantidad": 1
+    },
+    {
+    "id": 25,
+    "nombre": "Lavandina x1lt",
+    "precio": 190,
+    "desc": "Ayudin",
+    "img": "./img/ayudin.jpg",
+    "cantidad": 1
+    },
+    {
+    "id": 26,
+    "nombre": "Papel Hig. x80mts",
+    "precio": 790,
+    "desc": "Higienol",
+    "img": "./img/higienol.jpg",
+    "cantidad": 1
+    },
+    {
+    "id": 27,
+    "nombre": "Papel Hig. d/h",
+    "precio": 690,
+    "desc": "Higienol",
+    "img": "./img/hig80.jpg",
+    "cantidad": 1
+    },
+    {
+    "id": 28,
+    "nombre": "Papel cocina Sussex Clasico",
+    "precio": 390,
+    "desc": "Sussex",
+    "img": "./img/sussex.jpg",
+    "cantidad": 1
+    }
 ]

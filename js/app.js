@@ -229,6 +229,7 @@ const stockProductos = [
 
 let carrito = [];
 
+//capturo los id del html
 const contenedor = document.querySelector("#contenedor");
 const carritoContenedor = document.querySelector("#carritoContenedor");
 const vaciarCarrito = document.querySelector("#vaciarCarrito");
@@ -276,7 +277,7 @@ if (procesarCompra) {
 };
 
 //fetch
-
+/*
 fetch("productos.json")
   .then((resp) => resp.json())
   .then((data) => {
@@ -299,8 +300,8 @@ fetch("productos.json")
     contenedor.append(item)
   });
 
+*/
 
-/*
 //prueba fetch 2
 
 const URL = "productos.json";
@@ -308,7 +309,7 @@ const URL = "productos.json";
 const pedirProductos = async () => {
   const resp = await fetch(URL);
   const data = await resp.json();
-
+  console.log(data);
   data.forEach((prod) => {
     contenedor.innerHTML += `
     <div class="card mt-3" style="width: 18rem;">
@@ -320,15 +321,15 @@ const pedirProductos = async () => {
       <p class="card-text">Cantidad: ${prod.cantidad}</p>
       <button class="btn btn-primary" onclick="agregarProducto(${prod.id})">Comprar Producto</button>
     </div>
-  </div>
+    </div>
     `;
-    contenedor.append(prod)
+    
   })
   
 }
 pedirProductos()
 
-
+/*
 //INSERTO LAS CARDS DE LOS PRODUCTOS
 stockProductos.forEach((prod) => {
   const { id, nombre, precio, desc, img, cantidad } = prod;
