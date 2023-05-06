@@ -274,10 +274,10 @@ if (procesarCompra) {
     }
   });
 };
-/*
-//prueba fetch(me salen las cards pero dicen [object object])
 
-fetch("./productos.json")
+//fetch
+
+fetch("productos.json")
   .then((resp) => resp.json())
   .then((data) => {
     data.forEach((item) => {
@@ -294,40 +294,40 @@ fetch("./productos.json")
 </div>
 </div>
 `;
-      contenedor.append(item)
+     
     });
-
+    contenedor.append(item)
   });
 
-*/
+
 /*
 //prueba fetch 2
 
-const URL = "./productos.json";
+const URL = "productos.json";
 
 const pedirProductos = async () => {
-  resp = await fetch(URL)
+  const resp = await fetch(URL);
   const data = await resp.json();
 
-  data.forEach((item) => {
+  data.forEach((prod) => {
     contenedor.innerHTML += `
     <div class="card mt-3" style="width: 18rem;">
-    <img class="card-img-top mt-2" src="${item.img}" alt="Card image cap">
+    <img class="card-img-top mt-2" src="${prod.img}" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">${item.nombre}</h5>
-      <p class="card-text">Precio: ${item.precio}</p>
-      <p class="card-text">Descripcion: ${item.desc}</p>
-      <p class="card-text">Cantidad: ${item.cantidad}</p>
-      <button class="btn btn-primary" onclick="agregarProducto(${item.id})">Comprar Producto</button>
+      <h5 class="card-title">${prod.nombre}</h5>
+      <p class="card-text">Precio: ${prod.precio}</p>
+      <p class="card-text">Descripcion: ${prod.desc}</p>
+      <p class="card-text">Cantidad: ${prod.cantidad}</p>
+      <button class="btn btn-primary" onclick="agregarProducto(${prod.id})">Comprar Producto</button>
     </div>
   </div>
     `;
-    contenedor.append(data)
+    contenedor.append(prod)
   })
   
 }
 pedirProductos()
-*/
+
 
 //INSERTO LAS CARDS DE LOS PRODUCTOS
 stockProductos.forEach((prod) => {
@@ -347,7 +347,7 @@ stockProductos.forEach((prod) => {
     `;
   }
 });
-
+*/
 
 const agregarProducto = (id) => {
   const existe = carrito.some(prod => prod.id === id)
@@ -447,7 +447,7 @@ function enviarCompra(e) {
   e.preventDefault()
   const cliente = document.querySelector('#cliente').value
   const email = document.querySelector('#correo').value
-//validacion formulario
+  //validacion formulario
   if (email === '' || cliente == '') {
     Swal.fire({
       title: "¡Debes completar tu email y nombre!",
