@@ -1,25 +1,24 @@
-  
 function procesarPedido() {
-  const contenedorCompra = document.querySelector('#lista-compra tbody');
-  contenedorCompra.innerHTML = '';
-
   carrito.forEach((prod) => {
-    const { id, nombre, precio, cantidad, img } = prod;
-    const subTotal = precio * cantidad;
-
-    const row = document.createElement('tr');
-    row.innerHTML = `
-      <td><img class="img-fluid img-carrito" src="${img}" /></td>
-      <td>${nombre}</td>
-      <td>${precio}</td>
-      <td>${cantidad}</td>
-      <td>${subTotal}</td>
-    `;
-
-    contenedorCompra.appendChild(row);
+    const contenedorCompra = document.querySelector('#contenedorCompra')
+    const { id, nombre, precio, desc, img, cantidad } = prod;
+    const div = document.createElement("div");
+    div.innerHTML += `
+          <div class="modal-contenedor">
+            <div>
+            <img class="img-fluid img-carrito" src="${img}"/>
+            </div>
+            <div>
+            <p>Producto: ${nombre}</p>
+          <p>Precio: ${precio}</p>
+          <p>Cantidad :${cantidad}</p>
+          <button class="btn btn-danger"  onclick="eliminarProducto(${id})">Eliminar producto</button>
+            </div>
+          </div>
+          
+      
+          `;
+    contenedorCompra.appendChild(div);
+   
   });
-
-  const totalProceso = document.querySelector('#totalProceso');
-  const total = carrito.reduce((acc, prod) => acc + prod.precio * prod.cantidad, 0);
-  totalProceso.textContent = total;
 }

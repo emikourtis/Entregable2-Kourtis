@@ -141,6 +141,7 @@ a {
 
 .img-fluid {
     height: auto;
+    max-width: 28%;
 }
 
 #carritoContenedor{

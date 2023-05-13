@@ -1,8 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
 
-  
-  pedirProductos();
-});
 //carrito empieza con un array vacio al que le agregaremos productos o le sacaremos
 let carrito = [];
 
@@ -16,10 +12,20 @@ const totalProceso = document.querySelector("#totalProceso");
 const formulario = document.querySelector('#procesar-pago')
 const contenedor = document.querySelector("#contenedor");
 
+if (activarFuncion) {
+  activarFuncion.addEventListener("click", procesarPedido);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
 
 
-carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
+  pedirProductos();
+  carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  mostrarCarrito();
+  if(activarFuncion){
+  document.querySelector("#activarFuncion").click(procesarPedido);
+}
+});
 //si se llena el formulario correctamente y clickea el boton se envia la compra
 if (formulario) {
   formulario.addEventListener('submit', enviarCompra)
@@ -163,9 +169,9 @@ function procesarPedido() {
   carrito.forEach((prod) => {
     const listaCompra = document.querySelector("#lista-compra tbody");
     const { id, nombre, precio, img, cantidad } = prod;
-    
-      const row = document.createElement("tr");
-      row.innerHTML += `
+
+    const row = document.createElement("tr");
+    row.innerHTML += `
               <td>
               <img class="img-fluid img-carrito" src="${img}"/>
               </td>
@@ -174,8 +180,8 @@ function procesarPedido() {
             <td>${cantidad}</td>
             <td>${precio * cantidad}</td>
             `;
-      listaCompra.appendChild(row);
-    
+    listaCompra.appendChild(row);
+
   });
   totalProceso.innerText = carrito.reduce(
     (acc, prod) => acc + prod.cantidad * prod.precio,
