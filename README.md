@@ -12,8 +12,5 @@ CSS
 JavaScript  
 Bootstrap  
 
-## Contribuir al proyecto
-Si deseas contribuir al proyecto, puedes hacerlo clonando el repositorio en tu computadora local y realizando cambios en el código. Una vez que hayas realizado tus cambios, puedes enviar un pull request para que el equipo de desarrollo revise tus cambios y los incorpore al proyecto.
-
 # Equipo de desarrollo
 Emiliano Kourtis
